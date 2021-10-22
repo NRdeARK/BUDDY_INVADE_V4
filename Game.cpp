@@ -479,3 +479,13 @@ void Game::updateTime()
 	time++;
 }
 
+void Game::calculateScore()
+{
+
+}
+
+void Game::saveScore()
+{
+
+}
+

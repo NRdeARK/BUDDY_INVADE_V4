@@ -163,6 +163,9 @@
   <ItemGroup>
     <ResourceCompile Include="BUDDY_INVADE_V4.rc" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="lead.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

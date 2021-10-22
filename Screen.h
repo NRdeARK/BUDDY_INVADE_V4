@@ -197,7 +197,7 @@ public:
 	//Function about menu 
 	void drawLogo(int x, int y, int fg, int bg);
 	void openTextbox(int x,int y);
-	void writeTextbox();
+	void writeTextbox(int fg, int bg);
 	void closeTextbox();
 
 	//function about display player

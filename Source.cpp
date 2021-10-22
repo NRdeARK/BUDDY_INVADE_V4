@@ -10,7 +10,7 @@
 #include "Menu.h"
 #include "Scoreboard.h"
 Menu menu;
-Scoreboard lead;
+
 int main()
 {
 	while (true)
@@ -39,7 +39,19 @@ int main()
 				game.updateGameStatus();
 				game.updateTime();
 			}
-			game.point;
+			Scoreboard lead;
+			if (lead.can_be_added(game.point))
+			{
+				lead.getName();
+				lead.addScore(lead.name, game.point);
+				lead.pushList();
+				lead.showLeaderboard();
+				while (lead.isRunning())
+				{
+					lead.waitInput();
+				}
+			}
+			
 		}
 		if (menu.command == "exit")
 		{
@@ -47,10 +59,14 @@ int main()
 		}
 		if (menu.command == "lead")
 		{
+			Scoreboard lead;
+			lead.getList();
+			lead.showLeaderboard();
 			while (lead.isRunning())
 			{
-				lead.showLeaderboard();
+				lead.waitInput();
 			}
+			lead.pushList();
 		}
 	}
 	

@@ -45,7 +45,7 @@ void Menu::inputcommand()
 	while (command == "")
 	{
 		screen.openTextbox(32, 20);
-		screen.writeTextbox();
+		screen.writeTextbox(10,0);
 		screen.closeTextbox();
 		command = screen.collectedText;
 	}

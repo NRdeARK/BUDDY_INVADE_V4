@@ -138,8 +138,9 @@ void Screen::openTextbox(int x,int y)
 	set_cursor_visible(1);
 }
 
-void Screen::writeTextbox()
+void Screen::writeTextbox(int fg,int bg)
 {
+	set_cursor_color(fg, bg);
 	int startx = cursor.pos.X;
 	int starty = cursor.pos.Y;
 	int x = cursor.pos.X;
@@ -175,7 +176,7 @@ void Screen::writeTextbox()
 			charNum++;
 		}
 
-		string_to_buffer(startx, starty, text, white, black);
+		string_to_buffer(startx, starty, text, fg, bg);
 		string_to_buffer(startx, starty+1, control.collectedData, white, black);
 		buffer_to_console();
 

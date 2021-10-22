@@ -1,2 +1,6 @@
-﻿  Source.cpp
+﻿  Scoreboard.cpp
+C:\Users\natap\Desktop\Profund Game\BUDDY_INVADE_V4\BUDDY_INVADE_V4\Scoreboard.cpp(43,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\natap\Desktop\Profund Game\BUDDY_INVADE_V4\BUDDY_INVADE_V4\Scoreboard.cpp(45,20): warning C4018: '>=': signed/unsigned mismatch
+  Source.cpp
+  Generating Code...
   BUDDY_INVADE_V4.vcxproj -> C:\Users\natap\Desktop\Profund Game\BUDDY_INVADE_V4\Debug\BUDDY_INVADE_V4.exe

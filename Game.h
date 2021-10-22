@@ -68,5 +68,8 @@ public:
 	void updatePlayer();
 	void updateGameStatus();
 	void updateTime();
+	void calculateScore();
+	void saveScore();
+
 };
 
