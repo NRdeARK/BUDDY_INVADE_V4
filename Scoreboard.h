@@ -18,7 +18,7 @@ public:
 	//Class
 	Screen screen;
 	//Variable
-	bool isrunning;
+	
 	std::string boardtext;
 	//Function
 	void showLeaderboard();

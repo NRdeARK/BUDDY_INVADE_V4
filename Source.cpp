@@ -8,7 +8,9 @@
 #include "Screen.h"
 #include "Game.h"
 #include "Menu.h"
+#include "Scoreboard.h"
 Menu menu;
+Scoreboard lead;
 int main()
 {
 	while (true)
@@ -42,6 +44,13 @@ int main()
 		if (menu.command == "exit")
 		{
 			break;
+		}
+		if (menu.command == "lead")
+		{
+			while (lead.isRunning())
+			{
+				lead.showLeaderboard();
+			}
 		}
 	}
 	
