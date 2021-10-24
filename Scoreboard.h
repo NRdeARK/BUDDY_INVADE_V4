@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 #include <fstream>
+#include<vector>
 
 #include "Screen.h"
 #include "Control.h"
@@ -19,18 +20,18 @@ public:
 	Screen screen;
 	Control control;
 	//Variable
-	struct player
+	struct playerlisting
 	{
-		std::string name[5] = 
+		std::vector<std::string> name =
 		{
 			"NULL","NULL","NULL","NULL","NULL"
 		};
-		int score[5] =
+		std::vector <int> score =
 		{
 			0,0,0,0,0
 		};
 	};
-	player playerlist;
+	playerlisting playerlist;
 	std::string boardtext;
 	std::string name = "";
 	//Function

@@ -156,6 +156,6 @@ void Scoreboard::addScore(std::string name, int score)
 			break;
 		}
 	}
-	playerlist.name[order] = name;
-	playerlist.score[order] = score;
+	playerlist.name.insert(playerlist.name.begin() + order, name);
+	playerlist.score.insert(playerlist.score.begin() + order, score);
 }
