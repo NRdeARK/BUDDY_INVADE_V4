@@ -166,23 +166,37 @@ void Game::createEnemy()
 		spawnTime = 200;
 		sizelim = 7;
 	}
-	else
+	else if (time < 10000)
 	{
 		spawnTime = 100;
 		sizelim = 9;
 	}
+	else 
+	{
+		spawnTime = 50;
+		sizelim = 20;
+	}
 	//if time pass 500 +10*timestone ms
 	if (time % (spawnTime + 10 * time_stone) == 0)
 	{
-		//create enemy
-		/*
-		if (enemy.boss == 0)
+		if (point >= 500 && point < 1000 && enemy.boss == 0)
 		{
 			enemy.createEnemy(sizelim, "wall of buddy");
 			enemy.boss = 1;
 		}
-		*/
-		enemy.createEnemy(sizelim, "wall mob");
+		if (enemy.boss == 0)
+		{
+			int random = rand() % 10;
+			if (random == 0)
+			{
+				enemy.createEnemy(sizelim, "wall");
+			}
+			else
+			{
+				enemy.createEnemy(sizelim, "wall mob");
+			}
+		}
+
 	}
 }
 
@@ -319,17 +333,13 @@ void Game::updatePlayer()
 			{
 				int tag = rand() % enemy.enemyNum;
 				std::vector<COORD> xyPos = enemy.get_xy_pos_from_tag(tag);
-				enemy.decreseEnemyHealth(tag, 9999);
-
 				if (enemy.enemyType[tag] != "wall of buddy")
 				{
-
 					for (int i = 0; i < xyPos.size(); i++)
 					{
 						screen.erase_char_from_buffer(xyPos[i].X, xyPos[i].Y, 7, 4);
 						screen.buffer_to_console();
 					}
-
 				}
 				else
 				{
@@ -361,6 +371,7 @@ void Game::updatePlayer()
 					}
 				}
 				screen.buffer_to_console();
+				enemy.decreseEnemyHealth(tag, 9999);
 			}
 			
 		}

@@ -102,8 +102,8 @@ void Enemy::createEnemy(int limitSize, std::string type)
 	{
 		int size = 49;
 		COORD tempEnemypos{ 235 ,6 };
-		enemyHealth.push_back(size * size);
-		enemyScore.push_back(size * size);
+		enemyHealth.push_back(999);
+		enemyScore.push_back(999);
 		enemyType.push_back(type);
 		int crossx1 = 0;
 		int crossy1 = 0;
@@ -205,32 +205,36 @@ void Enemy::updateEnemyPos()
 
 	std::vector<COORD> tempenemyPos = enemyPos;
 	std::vector<int> tempenemyTag = enemyTag;
-	std::vector<int> tempenemyHealth = enemyHealth;
-	std::vector<int> tempenemyScore = enemyScore;
 	std::vector<int> tempenemychar = enemychar;
 	std::vector<int> tempenemyfg = enemyfg;
 	std::vector<int> tempenemybg = enemybg;
+
+	std::vector<int> tempenemyHealth = enemyHealth;
+	std::vector<int> tempenemyScore = enemyScore;
+	std::vector<std::string> tempenenmytype = enemyType;
+
+	
 	int j = 0;
 
 	for (int i = 0; i < enemyPos.size(); i++)
 	{
 		if (enemyPos[i].X == -1)
-		{
+		{	
+			// if last block of that mob gone delete that mob
+			if (tempenemyTag[j] != tempenemyTag[j + 1])
+			{
+				tempenemyHealth.erase(tempenemyHealth.begin() + tempenemyTag[j]);
+				tempenemyScore.erase(tempenemyScore.begin() + tempenemyTag[j]);
+				tempenenmytype.erase(tempenenmytype.begin() + tempenemyTag[j]);
+				enemyNum--;
+			}
+
 			// delete that block
 			tempenemyPos.erase(tempenemyPos.begin() + j);
 			tempenemyTag.erase(tempenemyTag.begin() + j);
 			tempenemychar.erase(tempenemychar.begin() + j);
 			tempenemyfg.erase(tempenemyfg.begin() + j);
 			tempenemybg.erase(tempenemybg.begin() + j);
-
-			// if last block of that mob gone delete that mob
-			if (tempenemyTag[j] != tempenemyTag[j + 1])
-			{
-				tempenemyHealth.erase(tempenemyHealth.begin() + tempenemyTag[j]);
-				tempenemyScore.erase(tempenemyScore.begin() + tempenemyTag[j]);
-				enemyNum--;
-			}
-
 
 			j--;
 		}
@@ -279,21 +283,25 @@ bool Enemy::decreseEnemyHealth(int tag, int damage)
 		enemyHealth[tag] = enemyHealth[tag] - damage;
 		if (enemyHealth[tag] < 1)
 		{
+			if (enemyType[tag]=="wall of buddy")
+			{
+				boss = 0;
+			}
 			point_not_add_yet += enemyScore[tag];
 			deleteEnemybyTag(tag);
-			if (rand() % 1 == 0)
+			if (rand() % 10 == 0)
 			{
 				obtain_mind = 1;
 			}
-			if (rand() % 100 == 0)
+			if (rand() % 10 == 0)
 			{
 				obtain_soul = 1;
 			}
-			if (rand() % 1 == 0)
+			if (rand() % 10 == 0)
 			{
 				obtain_time = 1;
 			}
-			if (rand() % 1 == 0)
+			if (rand() % 10 == 0)
 			{
 				obtain_space = 1;
 			}
@@ -338,6 +346,7 @@ void Enemy::deleteEnemybyTag(int tag)
 	std::vector<int> tempenemychar = enemychar;
 	std::vector<int> tempenemyfg = enemyfg;
 	std::vector<int> tempenemybg = enemybg;
+	std::vector<std::string> tempenemytype = enemyType;
 
 	int j = 0;
 
@@ -356,6 +365,7 @@ void Enemy::deleteEnemybyTag(int tag)
 	}
 	tempenemyHealth.erase(tempenemyHealth.begin() + tag);
 	tempenemyScore.erase(tempenemyScore.begin() + tag);
+	tempenemytype.erase(tempenemytype.begin() + tag);
 	enemyNum--;
 
 	enemyPos = tempenemyPos;
@@ -365,6 +375,7 @@ void Enemy::deleteEnemybyTag(int tag)
 	enemychar = tempenemychar;
 	enemyfg = tempenemyfg;
 	enemybg = tempenemybg;
+	enemyType = tempenemytype;
 	updateEnemyTag();
 }
 
