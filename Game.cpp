@@ -89,6 +89,7 @@ void Game::displayStatus()
 		screen.char_to_buffer(102, 60, 254, 6, 7);
 	}
 	//display boss status
+	/*
 	if (enemy.boss==1)
 	{
 		screen.char_to_buffer(112, 1, 254, 6, 7);
@@ -97,6 +98,7 @@ void Game::displayStatus()
 	{
 		screen.char_to_buffer(112, 1, 254, black, 7);
 	}
+	*/
 	//sent data from buffer to console 
 	screen.buffer_to_console();
 }
@@ -193,6 +195,8 @@ void Game::createEnemy()
 		{
 			enemy.createEnemy(sizelim, "wall of buddy");
 			enemy.boss = 1;
+			screen.erase_string_from_buffer(122, 1, 30, 0, 7);
+			screen.string_to_buffer(122,1,"boss is spawned",0,7);
 		}
 		if (enemy.boss == 0)
 		{
@@ -200,7 +204,6 @@ void Game::createEnemy()
 			if (random == 0)
 			{
 				int typeWall = rand() % 5;
-
 
 				if (typeWall == 0)
 				{
@@ -228,6 +231,21 @@ void Game::createEnemy()
 				enemy.createEnemy(sizelim, "wall mob");
 			}
 			
+		}
+		else
+		{
+			for (int i = 0; i < enemy.enemyType.size(); i++)
+			{
+				if (enemy.enemyType[i] == "wall of buddy")
+				{
+					enemy.boss =1;
+					break;
+				}
+				if (enemy.enemyType[i] != "wall of buddy")
+				{
+					enemy.boss = 0;
+				}
+			}
 		}
 
 	}
@@ -373,6 +391,8 @@ void Game::updatePlayer()
 		
 		if (player.checkEasterEgg())
 		{
+			screen.erase_string_from_buffer(122, 1, 30, 0, 7);
+			screen.string_to_buffer(122, 1, "reality stone aquired", 7, 0);
 			player.gem.reality_stone = 1;
 			reality_stone = 1;
 		}
@@ -440,6 +460,8 @@ void Game::updatePlayer()
 		screen.char_to_buffer(112, 60, 254, 0, 7);
 		if (point > 100)
 		{
+			screen.erase_string_from_buffer(122, 1, 30, 0, 7);
+			screen.string_to_buffer(122, 1, "power stone aquired", 7, 0);
 			power_stone = 1;
 			screen.char_to_buffer(112, 60, 254, 5, 7);
 		}
@@ -451,6 +473,8 @@ void Game::updatePlayer()
 		screen.char_to_buffer(108, 60, 254, 0, 7);
 		if (enemy.obtain_mind)
 		{
+			screen.erase_string_from_buffer(122, 1, 30, 0, 7);
+			screen.string_to_buffer(122, 1, "mind stone aquired", black, white);
 			mind_stone = 1;
 			player.gem.mind_stone = 1;
 			player.updateHp();
@@ -464,7 +488,8 @@ void Game::updatePlayer()
 		screen.char_to_buffer(106, 60, 254, 0, 7);
 		if (enemy.obtain_space)
 		{
-
+			screen.erase_string_from_buffer(122, 1, 30, 0, 7);
+			screen.string_to_buffer(122, 1, "space stone aquired", 0, 7 );
 			space_stone = 1;
 			player.gem.space_stone = 1;
 			player.updateHp();
@@ -477,6 +502,8 @@ void Game::updatePlayer()
 		screen.char_to_buffer(104, 60, 254, 0, 7);
 		if (enemy.obtain_time)
 		{
+			screen.erase_string_from_buffer(122, 1, 30, 0, 7);
+			screen.string_to_buffer(122, 1, "time stone aquired", 0, 7);
 			time_stone = 1;
 			screen.char_to_buffer(104, 60, 254, 2, 7);
 		}
@@ -487,6 +514,8 @@ void Game::updatePlayer()
 		screen.char_to_buffer(102, 60, 254, 0, 7);
 		if (enemy.obtain_soul)
 		{
+			screen.erase_string_from_buffer(122, 1, 30, 0, 7);
+			screen.string_to_buffer(122, 1, "soul stone aquired", 0, 7);
 			soul_stone = 1;
 			screen.char_to_buffer(102, 60, 254, 6, 7);
 		}

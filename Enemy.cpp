@@ -556,10 +556,6 @@ bool Enemy::decreseEnemyHealth(int tag, int damage)
 		enemyHealth[tag] = enemyHealth[tag] - damage;
 		if (enemyHealth[tag] < 1)
 		{
-			if (enemyType[tag]== "wall of buddy")
-			{
- 				boss = 0;
-			}
 			point_not_add_yet += enemyScore[tag];
 			deleteEnemybyTag(tag);
 			if (rand() % 10 == 0)

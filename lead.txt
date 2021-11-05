@@ -1,3 +1,5 @@
+playerpass
+7815
 passboss
 3255
 buso
@@ -6,5 +8,3 @@ playerfounbosss
 580
 payer3
 567
-posdf
-546
