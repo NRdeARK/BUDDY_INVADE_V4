@@ -43,6 +43,7 @@ public:
 	std::vector<int> enemyHealth;
 	std::vector<int> enemyScore;
 	std::vector<std::string>enemyType;
+	std::vector<COORD>enemyDirection;
 
 	//Function
 	void createEnemy(int limitSize, std::string type);
@@ -52,8 +53,4 @@ public:
 	std::vector<COORD> get_xy_pos_from_tag(int tag);
 	int get_Tag_from_xy(int x, int y);
 	void deleteEnemybyTag(int tag);
-
-
-
-
 };

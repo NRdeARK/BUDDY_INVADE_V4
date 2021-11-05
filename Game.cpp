@@ -88,6 +88,15 @@ void Game::displayStatus()
 	{
 		screen.char_to_buffer(102, 60, 254, 6, 7);
 	}
+	//display boss status
+	if (enemy.boss==1)
+	{
+		screen.char_to_buffer(112, 1, 254, 6, 7);
+	}
+	else
+	{
+		screen.char_to_buffer(112, 1, 254, black, 7);
+	}
 	//sent data from buffer to console 
 	screen.buffer_to_console();
 }
@@ -173,10 +182,11 @@ void Game::createEnemy()
 	}
 	else 
 	{
-		spawnTime = 50;
+		spawnTime = 70;
 		sizelim = 20;
 	}
 	//if time pass 500 +10*timestone ms
+	
 	if (time % (spawnTime + 10 * time_stone) == 0)
 	{
 		if (point >= 500 && point < 1000 && enemy.boss == 0)
@@ -189,35 +199,79 @@ void Game::createEnemy()
 			int random = rand() % 10;
 			if (random == 0)
 			{
-				enemy.createEnemy(sizelim, "wall");
+				int typeWall = rand() % 5;
+
+
+				if (typeWall == 0)
+				{
+					enemy.createEnemy(sizelim, "wall_top");
+				}
+				else if (typeWall == 1)
+				{
+					enemy.createEnemy(sizelim, "wall_mid");
+				}
+				else if (typeWall == 2)
+				{
+					enemy.createEnemy(sizelim, "wall_bot");
+				}
+				else if (typeWall >= 3)
+				{
+					enemy.createEnemy(sizelim, "wall");
+				}
+			}
+			else if(random<=3) 
+			{
+				enemy.createEnemy(sizelim, "cross mob");
 			}
 			else
 			{
 				enemy.createEnemy(sizelim, "wall mob");
 			}
+			
 		}
 
 	}
+
 }
 
 void Game::updateEnemy()
 {
 	int updateTime;
-	if (time < 500)
+	
+	if (enemy.boss==0)
 	{
-		updateTime = 15;
-	}
-	else if (time < 3000)
-	{
-		updateTime = 10;
-	}
-	else if (time < 5000)
-	{
-		updateTime = 5;
+		if (time < 500)
+		{
+			updateTime = 15;
+		}
+		else if (time < 1500)
+		{
+			updateTime = 13;
+		}
+		else if (time < 3000)
+		{
+			updateTime = 10;
+		}
+		else if (time < 4500)
+		{
+			updateTime = 7;
+		}
+		else if (time < 5000)
+		{
+			updateTime = 5;
+		}
+		else if (time < 6000)
+		{
+			updateTime = 4;
+		}
+		else
+		{
+			updateTime = 2;
+		}
 	}
 	else
 	{
-		updateTime = 2;
+		updateTime = 15;
 	}
 	///every 10 + 2*timestone enemy will update
 	if (time % (updateTime + 2 * time_stone) == 0)
