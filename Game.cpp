@@ -88,18 +88,8 @@ void Game::displayStatus()
 	{
 		screen.char_to_buffer(102, 60, 254, 6, 7);
 	}
-	//display boss status
-	/*
-	if (enemy.boss==1)
-	{
-		screen.char_to_buffer(112, 1, 254, 6, 7);
-	}
-	else
-	{
-		screen.char_to_buffer(112, 1, 254, black, 7);
-	}
-	*/
-	//sent data from buffer to console 
+
+
 	screen.buffer_to_console();
 }
 
@@ -234,6 +224,7 @@ void Game::createEnemy()
 		}
 		else
 		{
+			enemy.boss = 0;
 			for (int i = 0; i < enemy.enemyType.size(); i++)
 			{
 				if (enemy.enemyType[i] == "wall of buddy")
@@ -241,15 +232,9 @@ void Game::createEnemy()
 					enemy.boss =1;
 					break;
 				}
-				if (enemy.enemyType[i] != "wall of buddy")
-				{
-					enemy.boss = 0;
-				}
 			}
 		}
-
 	}
-
 }
 
 void Game::updateEnemy()
@@ -319,7 +304,7 @@ void Game::updateEnemy()
 
 void Game::updateBullet()
 {
-	bullet.update_bullet_position(1, 0);
+	
 	//loop equal to bullet
 	for (int i = 0; i < bullet.old_bulletPos.size(); i++)
 	{
@@ -364,7 +349,7 @@ void Game::updateBullet()
 			screen.char_to_buffer(bullet.bulletPos[i].X, bullet.bulletPos[i].Y, '>', 7, 0);
 		}
 	}
-
+	bullet.update_bullet_position(1, 0);
 }
 
 void Game::updatePlayer()

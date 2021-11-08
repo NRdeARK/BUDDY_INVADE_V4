@@ -488,17 +488,33 @@ void Enemy::updateEnemyPos()
 	for (int i = 0; i < enemyPos.size(); i++)
 	{
 		
-		if (enemyPos[i].X == -1)
-		{	
-			// if last block of that mob gone delete that mob
-			if (tempenemyTag[j] != tempenemyTag[j + 1])
+		if (enemyPos[i].X <= -1)
+		{
+			if (tempenemyTag.size()>1)//error
 			{
-				tempenemyHealth.erase(tempenemyHealth.begin() + tempenemyTag[j]);
-				tempenemyScore.erase(tempenemyScore.begin() + tempenemyTag[j]);
-				tempenenmytype.erase(tempenenmytype.begin() + tempenemyTag[j]);
-				tempenemyDirection.erase(tempenemyDirection.begin() + tempenemyTag[j]);
-				enemyNum--;
+				if (tempenemyTag[j] != tempenemyTag[j + 1])
+				{
+					tempenemyHealth.erase(tempenemyHealth.begin() + tempenemyTag[j]);
+					tempenemyScore.erase(tempenemyScore.begin() + tempenemyTag[j]);
+					tempenenmytype.erase(tempenenmytype.begin() + tempenemyTag[j]);
+					tempenemyDirection.erase(tempenemyDirection.begin() + tempenemyTag[j]);
+					enemyNum--;
+				}
 			}
+			else
+			{
+				if (j==tempenemyTag.size()-1)
+				{
+					tempenemyHealth.erase(tempenemyHealth.begin() + tempenemyTag[j]);
+					tempenemyScore.erase(tempenemyScore.begin() + tempenemyTag[j]);
+					tempenenmytype.erase(tempenenmytype.begin() + tempenemyTag[j]);
+					tempenemyDirection.erase(tempenemyDirection.begin() + tempenemyTag[j]);
+					enemyNum--;
+				}
+				
+			}
+			// if last block of that mob gone delete that mob
+			
 
 			// delete that block
 
