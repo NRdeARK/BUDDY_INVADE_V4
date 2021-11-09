@@ -536,6 +536,27 @@ void Game::updatePlayer()
 
 void Game::updateGameStatus()
 {
+	if (player.state.isPause)
+	{
+	player.control.collectedData = "";
+		while (true)
+		{
+			if (player.control.input())
+			{
+				if (player.control.collectedData=="enter")
+				{
+					runningStatus = 0;
+					break;
+				}
+				if (player.control.collectedData=="esc")
+				{
+					player.state.isPause = 0;
+					break;
+				}
+			}
+		}
+	player.control.collectedData = "";
+	}
 	if (player.state.isAlive==0)
 	{
 		if (soul_stone == 1)
@@ -558,13 +579,5 @@ void Game::updateTime()
 	time++;
 }
 
-void Game::calculateScore()
-{
 
-}
-
-void Game::saveScore()
-{
-
-}
 
