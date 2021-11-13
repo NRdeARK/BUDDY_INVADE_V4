@@ -192,6 +192,10 @@ void Game::createEnemy()
 		if (enemy.boss == 0 || time>boss_spawn_time+1000)
 		{
 			int random = rand() % 10;
+			if (enemy.boss==1)
+			{
+				enemy.boss = 0;
+			}
 			if (random == 0)
 			{
 				int typeWall = rand() % 5;
