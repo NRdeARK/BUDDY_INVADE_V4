@@ -53,6 +53,28 @@ int main()
 			}
 			
 		}
+		if (menu.command == "help")
+		{
+			menu.screen.drawSquare(0, 0, screen_x, screen_y, 0, 0);
+			menu.screen.string_to_buffer(screen_x - 50, 1, "Nataphan Rakvidhyasatra 64010223", 0, 7);
+			menu.screen.drawLogo(20, 5, 10, 0);
+			menu.screen.string_to_buffer(20, 20, "play :: to play game", 10, 0);
+			menu.screen.string_to_buffer(20, 22, "lead :: to check leaderboard", 10, 0);
+			menu.screen.string_to_buffer(20, 24, "exit :: to exit program", 10, 0);
+			menu.screen.string_to_buffer(20, 26, "help :: to check manual command", 10, 0);
+			menu.screen.string_to_buffer(20, 26, "help :: to check manual command", 10, 0);
+			menu.screen.buffer_to_console();
+			menu.screen.control.collectedData = "";
+			while (true)
+			{
+				menu.screen.control.input();
+				if (menu.screen.control.collectedData != "")
+				{
+					break;
+				}
+			}
+			
+		}
 		if (menu.command == "exit")
 		{
 			break;

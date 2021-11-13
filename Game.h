@@ -37,6 +37,7 @@ public:
 	long int disappearTime = 0;
 	int level = 0;
 	int shipLevel = 0;
+	int boss_spawn_time=0;
 
 	//Colour code
 	const int black = 0;
@@ -68,8 +69,6 @@ public:
 	void updatePlayer();
 	void updateGameStatus();
 	void updateTime();
-	void calculateScore();
-	void saveScore();
 
 };
 

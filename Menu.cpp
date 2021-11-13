@@ -62,10 +62,14 @@ void Menu::inputcommand()
 	{
 		runningStatus = 0;
 	}
+	if (command == "help")
+	{
+		runningStatus = 0;
+	}
 	else
 	{
 		screen.string_to_buffer(20, 19, "                                                         ", 4, 0);
-		screen.string_to_buffer(20, 19, "error: command \"" + command + "\" not found", 4, 0);
+		screen.string_to_buffer(20, 19, "error: command \"" + command + "\" not found type \"help\" for help", 4, 0);
 	}
 	screen.buffer_to_console();
 }

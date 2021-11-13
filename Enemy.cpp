@@ -565,6 +565,10 @@ void Enemy::updateEnemyTag()
 
 bool Enemy::decreseEnemyHealth(int tag, int damage)
 {
+	if (tag==999)
+	{
+		return 0;
+	}
 	bool death = 0;
 	//std::vector<COORD> deletedpos;
 	if (tag < enemyHealth.size())
@@ -599,19 +603,27 @@ bool Enemy::decreseEnemyHealth(int tag, int damage)
 std::vector<COORD> Enemy::get_xy_pos_from_tag(int tag)
 {
 	std::vector<COORD>  xyPos;
-	for (int i = 0; i < enemyTag.size(); i++)
+	if (tag != 999)
 	{
-		if (enemyTag[i] == tag)
+		for (int i = 0; i < enemyTag.size(); i++)
 		{
-			xyPos.push_back(enemyPos[i]);
+			if (enemyTag[i] == tag)
+			{
+				xyPos.push_back(enemyPos[i]);
+			}
 		}
+	    return xyPos;
 	}
-	return xyPos;
+	else
+	{
+		return xyPos;
+	}
+	
 }
 
 int Enemy::get_Tag_from_xy(int x, int y)
 {
-	int tag = 0;
+	int tag = 999;
 	for (int i = 0; i < enemyPos.size(); i++)
 	{
 		if (enemyPos[i].X == x && enemyPos[i].Y == y)

@@ -187,8 +187,9 @@ void Game::createEnemy()
 			enemy.boss = 1;
 			screen.erase_string_from_buffer(122, 1, 30, 0, 7);
 			screen.string_to_buffer(122,1,"boss is spawned",0,7);
+			boss_spawn_time = time;
 		}
-		if (enemy.boss == 0)
+		if (enemy.boss == 0 || time>boss_spawn_time+1000)
 		{
 			int random = rand() % 10;
 			if (random == 0)
@@ -346,7 +347,7 @@ void Game::updateBullet()
 		else
 		{
 			//fill bullet to buffer
-			screen.char_to_buffer(bullet.bulletPos[i].X, bullet.bulletPos[i].Y, '>', 7, 0);
+			screen.char_to_buffer(bullet.bulletPos[i].X, bullet.bulletPos[i].Y, '>', light_green, black);
 		}
 	}
 	bullet.update_bullet_position(1, 0);
@@ -446,7 +447,7 @@ void Game::updatePlayer()
 		if (point > 100)
 		{
 			screen.erase_string_from_buffer(122, 1, 30, 0, 7);
-			screen.string_to_buffer(122, 1, "power stone aquired", 7, 0);
+			screen.string_to_buffer(122, 1, "power stone aquired", black, white);
 			power_stone = 1;
 			screen.char_to_buffer(112, 60, 254, 5, 7);
 		}
@@ -538,7 +539,9 @@ void Game::updateGameStatus()
 {
 	if (player.state.isPause)
 	{
-	player.control.collectedData = "";
+		screen.string_to_buffer(121, 1, "Do you want to exit yes(enter)/no(esc)", black, white);
+		screen.buffer_to_console();
+		player.control.collectedData = "";
 		while (true)
 		{
 			if (player.control.input())

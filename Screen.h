@@ -206,5 +206,10 @@ public:
 	void update_ship_level(int shipLevel);
 	char char_from_player(COORD playerPos, int num);
 
+	//help
+
+
+	//anoucemnet
+
 };
 

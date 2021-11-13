@@ -11,27 +11,29 @@ C:\Users\natap\Desktop\Profund Game\BUDDY_INVADE_V4\BUDDY_INVADE_V4\Game.cpp(74,
 C:\Users\natap\Desktop\Profund Game\BUDDY_INVADE_V4\BUDDY_INVADE_V4\Game.cpp(79,34): warning C4309: 'argument': truncation of constant value
 C:\Users\natap\Desktop\Profund Game\BUDDY_INVADE_V4\BUDDY_INVADE_V4\Game.cpp(84,34): warning C4309: 'argument': truncation of constant value
 C:\Users\natap\Desktop\Profund Game\BUDDY_INVADE_V4\BUDDY_INVADE_V4\Game.cpp(89,34): warning C4309: 'argument': truncation of constant value
-C:\Users\natap\Desktop\Profund Game\BUDDY_INVADE_V4\BUDDY_INVADE_V4\Game.cpp(228,22): warning C4018: '<': signed/unsigned mismatch
-C:\Users\natap\Desktop\Profund Game\BUDDY_INVADE_V4\BUDDY_INVADE_V4\Game.cpp(283,21): warning C4018: '<': signed/unsigned mismatch
-C:\Users\natap\Desktop\Profund Game\BUDDY_INVADE_V4\BUDDY_INVADE_V4\Game.cpp(294,21): warning C4018: '<': signed/unsigned mismatch
-C:\Users\natap\Desktop\Profund Game\BUDDY_INVADE_V4\BUDDY_INVADE_V4\Game.cpp(309,20): warning C4018: '<': signed/unsigned mismatch
-C:\Users\natap\Desktop\Profund Game\BUDDY_INVADE_V4\BUDDY_INVADE_V4\Game.cpp(315,20): warning C4018: '<': signed/unsigned mismatch
-C:\Users\natap\Desktop\Profund Game\BUDDY_INVADE_V4\BUDDY_INVADE_V4\Game.cpp(327,15): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-C:\Users\natap\Desktop\Profund Game\BUDDY_INVADE_V4\BUDDY_INVADE_V4\Game.cpp(334,23): warning C4018: '<': signed/unsigned mismatch
-C:\Users\natap\Desktop\Profund Game\BUDDY_INVADE_V4\BUDDY_INVADE_V4\Game.cpp(384,34): warning C4309: 'argument': truncation of constant value
-C:\Users\natap\Desktop\Profund Game\BUDDY_INVADE_V4\BUDDY_INVADE_V4\Game.cpp(397,24): warning C4018: '<': signed/unsigned mismatch
-C:\Users\natap\Desktop\Profund Game\BUDDY_INVADE_V4\BUDDY_INVADE_V4\Game.cpp(405,24): warning C4018: '<': signed/unsigned mismatch
-C:\Users\natap\Desktop\Profund Game\BUDDY_INVADE_V4\BUDDY_INVADE_V4\Game.cpp(417,24): warning C4018: '<': signed/unsigned mismatch
-C:\Users\natap\Desktop\Profund Game\BUDDY_INVADE_V4\BUDDY_INVADE_V4\Game.cpp(426,24): warning C4018: '<': signed/unsigned mismatch
-C:\Users\natap\Desktop\Profund Game\BUDDY_INVADE_V4\BUDDY_INVADE_V4\Game.cpp(438,34): warning C4309: 'argument': truncation of constant value
-C:\Users\natap\Desktop\Profund Game\BUDDY_INVADE_V4\BUDDY_INVADE_V4\Game.cpp(445,34): warning C4309: 'argument': truncation of constant value
-C:\Users\natap\Desktop\Profund Game\BUDDY_INVADE_V4\BUDDY_INVADE_V4\Game.cpp(451,35): warning C4309: 'argument': truncation of constant value
-C:\Users\natap\Desktop\Profund Game\BUDDY_INVADE_V4\BUDDY_INVADE_V4\Game.cpp(458,34): warning C4309: 'argument': truncation of constant value
-C:\Users\natap\Desktop\Profund Game\BUDDY_INVADE_V4\BUDDY_INVADE_V4\Game.cpp(466,35): warning C4309: 'argument': truncation of constant value
-C:\Users\natap\Desktop\Profund Game\BUDDY_INVADE_V4\BUDDY_INVADE_V4\Game.cpp(473,34): warning C4309: 'argument': truncation of constant value
-C:\Users\natap\Desktop\Profund Game\BUDDY_INVADE_V4\BUDDY_INVADE_V4\Game.cpp(481,35): warning C4309: 'argument': truncation of constant value
-C:\Users\natap\Desktop\Profund Game\BUDDY_INVADE_V4\BUDDY_INVADE_V4\Game.cpp(487,34): warning C4309: 'argument': truncation of constant value
-C:\Users\natap\Desktop\Profund Game\BUDDY_INVADE_V4\BUDDY_INVADE_V4\Game.cpp(493,35): warning C4309: 'argument': truncation of constant value
-C:\Users\natap\Desktop\Profund Game\BUDDY_INVADE_V4\BUDDY_INVADE_V4\Game.cpp(499,34): warning C4309: 'argument': truncation of constant value
-C:\Users\natap\Desktop\Profund Game\BUDDY_INVADE_V4\BUDDY_INVADE_V4\Game.cpp(505,35): warning C4309: 'argument': truncation of constant value
+C:\Users\natap\Desktop\Profund Game\BUDDY_INVADE_V4\BUDDY_INVADE_V4\Game.cpp(229,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\natap\Desktop\Profund Game\BUDDY_INVADE_V4\BUDDY_INVADE_V4\Game.cpp(284,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\natap\Desktop\Profund Game\BUDDY_INVADE_V4\BUDDY_INVADE_V4\Game.cpp(295,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\natap\Desktop\Profund Game\BUDDY_INVADE_V4\BUDDY_INVADE_V4\Game.cpp(310,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\natap\Desktop\Profund Game\BUDDY_INVADE_V4\BUDDY_INVADE_V4\Game.cpp(316,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\natap\Desktop\Profund Game\BUDDY_INVADE_V4\BUDDY_INVADE_V4\Game.cpp(328,15): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\natap\Desktop\Profund Game\BUDDY_INVADE_V4\BUDDY_INVADE_V4\Game.cpp(335,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\natap\Desktop\Profund Game\BUDDY_INVADE_V4\BUDDY_INVADE_V4\Game.cpp(385,34): warning C4309: 'argument': truncation of constant value
+C:\Users\natap\Desktop\Profund Game\BUDDY_INVADE_V4\BUDDY_INVADE_V4\Game.cpp(398,24): warning C4018: '<': signed/unsigned mismatch
+C:\Users\natap\Desktop\Profund Game\BUDDY_INVADE_V4\BUDDY_INVADE_V4\Game.cpp(406,24): warning C4018: '<': signed/unsigned mismatch
+C:\Users\natap\Desktop\Profund Game\BUDDY_INVADE_V4\BUDDY_INVADE_V4\Game.cpp(418,24): warning C4018: '<': signed/unsigned mismatch
+C:\Users\natap\Desktop\Profund Game\BUDDY_INVADE_V4\BUDDY_INVADE_V4\Game.cpp(427,24): warning C4018: '<': signed/unsigned mismatch
+C:\Users\natap\Desktop\Profund Game\BUDDY_INVADE_V4\BUDDY_INVADE_V4\Game.cpp(439,34): warning C4309: 'argument': truncation of constant value
+C:\Users\natap\Desktop\Profund Game\BUDDY_INVADE_V4\BUDDY_INVADE_V4\Game.cpp(446,34): warning C4309: 'argument': truncation of constant value
+C:\Users\natap\Desktop\Profund Game\BUDDY_INVADE_V4\BUDDY_INVADE_V4\Game.cpp(452,35): warning C4309: 'argument': truncation of constant value
+C:\Users\natap\Desktop\Profund Game\BUDDY_INVADE_V4\BUDDY_INVADE_V4\Game.cpp(459,34): warning C4309: 'argument': truncation of constant value
+C:\Users\natap\Desktop\Profund Game\BUDDY_INVADE_V4\BUDDY_INVADE_V4\Game.cpp(467,35): warning C4309: 'argument': truncation of constant value
+C:\Users\natap\Desktop\Profund Game\BUDDY_INVADE_V4\BUDDY_INVADE_V4\Game.cpp(474,34): warning C4309: 'argument': truncation of constant value
+C:\Users\natap\Desktop\Profund Game\BUDDY_INVADE_V4\BUDDY_INVADE_V4\Game.cpp(482,35): warning C4309: 'argument': truncation of constant value
+C:\Users\natap\Desktop\Profund Game\BUDDY_INVADE_V4\BUDDY_INVADE_V4\Game.cpp(488,34): warning C4309: 'argument': truncation of constant value
+C:\Users\natap\Desktop\Profund Game\BUDDY_INVADE_V4\BUDDY_INVADE_V4\Game.cpp(494,35): warning C4309: 'argument': truncation of constant value
+C:\Users\natap\Desktop\Profund Game\BUDDY_INVADE_V4\BUDDY_INVADE_V4\Game.cpp(500,34): warning C4309: 'argument': truncation of constant value
+C:\Users\natap\Desktop\Profund Game\BUDDY_INVADE_V4\BUDDY_INVADE_V4\Game.cpp(506,35): warning C4309: 'argument': truncation of constant value
+  Source.cpp
+  Generating Code...
   BUDDY_INVADE_V4.vcxproj -> C:\Users\natap\Desktop\Profund Game\BUDDY_INVADE_V4\Debug\BUDDY_INVADE_V4.exe
