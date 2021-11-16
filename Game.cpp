@@ -189,7 +189,7 @@ void Game::createEnemy()
 			screen.string_to_buffer(122,1,"boss is spawned",0,7);
 			boss_spawn_time = time;
 		}
-		if (enemy.boss == 0 || time>boss_spawn_time+1000)
+		if (enemy.boss == 0 || time>boss_spawn_time+3000)
 		{
 			int random = rand() % 10;
 			if (enemy.boss==1)

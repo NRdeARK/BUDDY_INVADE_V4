@@ -166,6 +166,7 @@ void Screen::writeTextbox(int fg,int bg)
 			x -= 1;
 			set_cursor_pos(x, y);
 			charNum--;
+			string_to_buffer(startx, starty + 1, "         ", white, black);
 
 		}
 		if (std::isalnum(control.collectedData[0])&&control.collectedData.size()<2 && charNum < 20)
@@ -174,8 +175,9 @@ void Screen::writeTextbox(int fg,int bg)
 			x += 1;
 			set_cursor_pos(x,y);
 			charNum++;
+			string_to_buffer(startx, starty + 1, "         ", white, black);
 		}
-
+		
 		string_to_buffer(startx, starty, text, fg, bg);
 		string_to_buffer(startx, starty+1, control.collectedData, white, black);
 		buffer_to_console();

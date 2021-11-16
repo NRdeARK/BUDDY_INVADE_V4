@@ -37,7 +37,7 @@ public:
 	long int disappearTime = 0;
 	int level = 0;
 	int shipLevel = 0;
-	int boss_spawn_time=0;
+	int boss_spawn_time;
 
 	//Colour code
 	const int black = 0;
