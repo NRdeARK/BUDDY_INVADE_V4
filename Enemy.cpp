@@ -120,7 +120,7 @@ void Enemy::createEnemy(int limitSize, std::string type)
 	}
 	if (type == "wall")
 	{
-		int size = rand() % limitSize + 1;
+		int size = rand() % limitSize + 2;
 
 		COORD tempEnemypos{ 235 ,rand() % (50 - size) + 4 };
 		enemyHealth.push_back(999);
@@ -168,7 +168,7 @@ void Enemy::createEnemy(int limitSize, std::string type)
 	}
 	if (type == "wall_top")
 	{
-		int size = rand() % limitSize + 1;
+		int size = rand() % limitSize + 2;
 		COORD tempEnemypos{ 235 ,12 };
 		enemyHealth.push_back(999);
 		enemyScore.push_back(size * size);
@@ -215,7 +215,7 @@ void Enemy::createEnemy(int limitSize, std::string type)
 	}
 	if (type == "wall_bot")
 	{
-		int size = rand() % limitSize + 1;
+		int size = rand() % limitSize + 2;
 		COORD tempEnemypos{ 235 ,3 };
 		enemyHealth.push_back(999);
 		enemyScore.push_back(size * size);
@@ -262,7 +262,7 @@ void Enemy::createEnemy(int limitSize, std::string type)
 	}
 	if (type == "wall_mid")
 	{
-		int size = rand() % limitSize + 1;
+		int size = rand() % limitSize + 2;
 		COORD tempEnemypos{ 235 ,3 };
 		enemyHealth.push_back(999);
 		enemyScore.push_back(size * size);

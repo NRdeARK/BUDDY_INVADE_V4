@@ -1,5 +1,13 @@
-﻿  Screen.cpp
-C:\Users\natap\Desktop\Profund Game\BUDDY_INVADE_V4\BUDDY_INVADE_V4\Screen.cpp(37,20): warning C4018: '<': signed/unsigned mismatch
-C:\Users\natap\Desktop\Profund Game\BUDDY_INVADE_V4\BUDDY_INVADE_V4\Screen.cpp(67,14): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
-C:\Users\natap\Desktop\Profund Game\BUDDY_INVADE_V4\BUDDY_INVADE_V4\Screen.cpp(67,16): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
+﻿  Enemy.cpp
+C:\Users\natap\Desktop\Profund Game\BUDDY_INVADE_V4\BUDDY_INVADE_V4\Enemy.cpp(14,49): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
+C:\Users\natap\Desktop\Profund Game\BUDDY_INVADE_V4\BUDDY_INVADE_V4\Enemy.cpp(65,49): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
+C:\Users\natap\Desktop\Profund Game\BUDDY_INVADE_V4\BUDDY_INVADE_V4\Enemy.cpp(125,49): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
+C:\Users\natap\Desktop\Profund Game\BUDDY_INVADE_V4\BUDDY_INVADE_V4\Enemy.cpp(449,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\natap\Desktop\Profund Game\BUDDY_INVADE_V4\BUDDY_INVADE_V4\Enemy.cpp(469,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\natap\Desktop\Profund Game\BUDDY_INVADE_V4\BUDDY_INVADE_V4\Enemy.cpp(488,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\natap\Desktop\Profund Game\BUDDY_INVADE_V4\BUDDY_INVADE_V4\Enemy.cpp(547,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\natap\Desktop\Profund Game\BUDDY_INVADE_V4\BUDDY_INVADE_V4\Enemy.cpp(574,10): warning C4018: '<': signed/unsigned mismatch
+C:\Users\natap\Desktop\Profund Game\BUDDY_INVADE_V4\BUDDY_INVADE_V4\Enemy.cpp(608,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\natap\Desktop\Profund Game\BUDDY_INVADE_V4\BUDDY_INVADE_V4\Enemy.cpp(627,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\natap\Desktop\Profund Game\BUDDY_INVADE_V4\BUDDY_INVADE_V4\Enemy.cpp(651,20): warning C4018: '<': signed/unsigned mismatch
   BUDDY_INVADE_V4.vcxproj -> C:\Users\natap\Desktop\Profund Game\BUDDY_INVADE_V4\Debug\BUDDY_INVADE_V4.exe
