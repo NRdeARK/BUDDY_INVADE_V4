@@ -54,15 +54,15 @@ void Menu::inputcommand()
 	{
 		runningStatus = 0;
 	}
-	if (command == "lead")
+	else if (command == "lead")
 	{
 		runningStatus = 0;
 	}
-	if (command == "exit")
+	else if (command == "exit")
 	{
 		runningStatus = 0;
 	}
-	if (command == "help")
+	else if (command == "help")
 	{
 		runningStatus = 0;
 	}
