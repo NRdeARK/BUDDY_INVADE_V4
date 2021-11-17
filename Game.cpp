@@ -543,7 +543,7 @@ void Game::updateGameStatus()
 {
 	if (player.state.isPause)
 	{
-		screen.string_to_buffer(121, 1, "Do you want to exit yes(enter)/no(esc)", black, white);
+		screen.string_to_buffer(122, 1, "Do you want to exit yes(enter)/no(esc)", black, white);
 		screen.buffer_to_console();
 		player.control.collectedData = "";
 		while (true)
@@ -553,11 +553,15 @@ void Game::updateGameStatus()
 				if (player.control.collectedData=="enter")
 				{
 					runningStatus = 0;
+					screen.string_to_buffer(122, 1, "                                                    ", black, white);
+					screen.buffer_to_console();
 					break;
 				}
 				if (player.control.collectedData=="esc")
 				{
 					player.state.isPause = 0;
+					screen.string_to_buffer(122, 1, "                                                    ", black, white);
+					screen.buffer_to_console();
 					break;
 				}
 			}
