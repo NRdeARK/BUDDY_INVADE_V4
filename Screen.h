@@ -158,7 +158,7 @@ public:
 	//Colour code
 	const int black = 0;
 	const int blue = 1;
-	const int greem = 2;
+	const int green = 2;
 	const int aqua = 3;
 	const int red = 4;
 	const int purple = 5;
