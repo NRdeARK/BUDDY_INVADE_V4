@@ -186,7 +186,9 @@ void Screen::writeTextbox(int fg,int bg)
 	} while (control.collectedData != "enter" && control.collectedData != "esc");
 	if (control.collectedData == "enter")
 	{
+		Beep(2000, 200);
 		collectedText = text;
+		closeTextbox();
 	}
 
 }
